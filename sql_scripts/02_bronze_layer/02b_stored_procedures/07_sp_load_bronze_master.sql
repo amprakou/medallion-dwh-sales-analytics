@@ -19,7 +19,7 @@
 -- =============================================
 
 
-CREATE PROCEDURE bronze.sp_load_bronze_master;
+CREATE PROCEDURE bronze.sp_load_bronze_master
 AS
 BEGIN
     SET NOCOUNT ON;
