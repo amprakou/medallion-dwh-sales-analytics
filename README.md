@@ -15,80 +15,80 @@ This project demonstrates end-to-end data warehouse development, from raw data i
 ## Project Structure
 
 ```
-                                          📦 data-warehouse-project
-                                          │
-                                          ├── 📁 analytics/
-                                          │   ├── 📄 DAX.md
-                                          │   ├── 📄 README.md
-                                          │   └── 📄 dashboard.md
-                                          │
-                                          ├── 📁 datasets/
-                                          │   ├── 📁 crm/
-                                          │   │   ├── 📄 cust_info.csv
-                                          │   │   ├── 📄 prd_info.csv
-                                          │   │   └── 📄 sales_details.csv
-                                          │   └── 📁 erp/
-                                          │       ├── 📄 CUST_AZ12.csv
-                                          │       ├── 📄 LOC_A101.csv
-                                          │       └── 📄 PX_CAT_G1V2.csv
-                                          │
-                                          ├── 📁 sql_scripts/
-                                          │   │
-                                          │   ├── 📁 01_database_initialization/
-                                          │   │   └── 📄 01_init_database.sql
-                                          │   │
-                                          │   ├── 📁 02_bronze_layer/
-                                          │   │   ├── 📁 02a_table_scripts/
-                                          │   │   │   ├── 📄 01_bronze_dll.sql
-                                          │   │   │   └── 📄 02_bronze_log.sql
-                                          │   │   │
-                                          │   │   └── 📁 02b_stored_procedures/
-                                          │   │       ├── 📄 01_sp_bronze.load_crm_cust_info.sql
-                                          │   │       ├── 📄 02_sp_bronze.load_crm_prd_info.sql
-                                          │   │       ├── 📄 03_sp_bronze.load_crm_sales_details.sql
-                                          │   │       ├── 📄 04_sp_bronze.load_erp_cust_az12.sql
-                                          │   │       ├── 📄 05_sp_bronze.load_erp_loc_a101.sql
-                                          │   │       ├── 📄 06_sp_bronze.load_erp_px_cat_g1v2.sql
-                                          │   │       └── 📄 07_sp_load_bronze_master.sql
-                                          │   │
-                                          │   ├── 📁 03_silver_layer/
-                                          │   │   ├── 📁 01_eda/
-                                          │   │   │   ├── 📄 crm_customer.sql
-                                          │   │   │   ├── 📄 crm_prd_info.sql
-                                          │   │   │   ├── 📄 crm_sales_details.sql
-                                          │   │   │   ├── 📄 erp_cust_az12.sql
-                                          │   │   │   ├── 📄 erp_loc_a101.sql
-                                          │   │   │   └── 📄 erp_px_cat_g1v2.sql
-                                          │   │   │
-                                          │   │   ├── 📁 02_table_scripts/
-                                          │   │   │   ├── 📄 silver_indexing.sql
-                                          │   │   │   ├── 📄 silver_log.sql
-                                          │   │   │   └── 📄 silver_table_creation.sql
-                                          │   │   │
-                                          │   │   ├── 📁 03_cleansing_load/
-                                          │   │   │   ├── 📄 crm_cust_info.sql
-                                          │   │   │   ├── 📄 crm_prd_info.sql
-                                          │   │   │   ├── 📄 crm_sales_details.sql
-                                          │   │   │   ├── 📄 erp_cust_az12.sql
-                                          │   │   │   ├── 📄 erp_loc_a101.sql
-                                          │   │   │   └── 📄 erp_px_cat_g1v2.sql
-                                          │   │   │
-                                          │   │   └── 📁 04_stored_procedures/
-                                          │   │       ├── 📄 01_sp_load_crm_customer.sql
-                                          │   │       ├── 📄 02_sp_load_crm_product.sql
-                                          │   │       ├── 📄 03_sp_load_crm_sales.sql
-                                          │   │       ├── 📄 04_sp_load_erp_customer.sql
-                                          │   │       ├── 📄 05_sp_load_erp_location.sql
-                                          │   │       ├── 📄 06_sp_load_erp_product_category.sql
-                                          │   │       └── 📄 07_sp_load_silver_master.sql
-                                          │   │
-                                          │   └── 📁 05_gold_layer/
-                                          │       ├── 📄 dim_customers.sql
-                                          │       ├── 📄 dim_products.sql
-                                          │       └── 📄 fact_sales.sql
-                                          │
-                                          ├── 📄 LICENSE
-                                          └── 📄 README.md
+ 📦 data-warehouse-project
+ │
+ ├── 📁 analytics/
+ │   ├── 📄 DAX.md
+ │   ├── 📄 README.md
+ │   └── 📄 dashboard.md
+ │
+ ├── 📁 datasets/
+ │   ├── 📁 crm/
+ │   │   ├── 📄 cust_info.csv
+ │   │   ├── 📄 prd_info.csv
+ │   │   └── 📄 sales_details.csv
+ │   └── 📁 erp/
+ │       ├── 📄 CUST_AZ12.csv
+ │       ├── 📄 LOC_A101.csv
+ │       └── 📄 PX_CAT_G1V2.csv
+ │
+ ├── 📁 sql_scripts/
+ │   │
+ │   ├── 📁 01_database_initialization/
+ │   │   └── 📄 01_init_database.sql
+ │   │
+ │   ├── 📁 02_bronze_layer/
+ │   │   ├── 📁 02a_table_scripts/
+ │   │   │   ├── 📄 01_bronze_dll.sql
+ │   │   │   └── 📄 02_bronze_log.sql
+ │   │   │
+ │   │   └── 📁 02b_stored_procedures/
+ │   │       ├── 📄 01_sp_bronze.load_crm_cust_info.sql
+ │   │       ├── 📄 02_sp_bronze.load_crm_prd_info.sql
+ │   │       ├── 📄 03_sp_bronze.load_crm_sales_details.sql
+ │   │       ├── 📄 04_sp_bronze.load_erp_cust_az12.sql
+ │   │       ├── 📄 05_sp_bronze.load_erp_loc_a101.sql
+ │   │       ├── 📄 06_sp_bronze.load_erp_px_cat_g1v2.sql
+ │   │       └── 📄 07_sp_load_bronze_master.sql
+ │   │
+ │   ├── 📁 03_silver_layer/
+ │   │   ├── 📁 01_eda/
+ │   │   │   ├── 📄 crm_customer.sql
+ │   │   │   ├── 📄 crm_prd_info.sql
+ │   │   │   ├── 📄 crm_sales_details.sql
+ │   │   │   ├── 📄 erp_cust_az12.sql
+ │   │   │   ├── 📄 erp_loc_a101.sql
+ │   │   │   └── 📄 erp_px_cat_g1v2.sql
+ │   │   │
+ │   │   ├── 📁 02_table_scripts/
+ │   │   │   ├── 📄 silver_indexing.sql
+ │   │   │   ├── 📄 silver_log.sql
+ │   │   │   └── 📄 silver_table_creation.sql
+ │   │   │
+ │   │   ├── 📁 03_cleansing_load/
+ │   │   │   ├── 📄 crm_cust_info.sql
+ │   │   │   ├── 📄 crm_prd_info.sql
+ │   │   │   ├── 📄 crm_sales_details.sql
+ │   │   │   ├── 📄 erp_cust_az12.sql
+ │   │   │   ├── 📄 erp_loc_a101.sql
+ │   │   │   └── 📄 erp_px_cat_g1v2.sql
+ │   │   │
+ │   │   └── 📁 04_stored_procedures/
+ │   │       ├── 📄 01_sp_load_crm_customer.sql
+ │   │       ├── 📄 02_sp_load_crm_product.sql
+ │   │       ├── 📄 03_sp_load_crm_sales.sql
+ │   │       ├── 📄 04_sp_load_erp_customer.sql
+ │   │       ├── 📄 05_sp_load_erp_location.sql
+ │   │       ├── 📄 06_sp_load_erp_product_category.sql
+ │   │       └── 📄 07_sp_load_silver_master.sql
+ │   │
+ │   └── 📁 05_gold_layer/
+ │       ├── 📄 dim_customers.sql
+ │       ├── 📄 dim_products.sql
+ │       └── 📄 fact_sales.sql
+ │
+ ├── 📄 LICENSE
+ └── 📄 README.md
 ```
 
 ---
