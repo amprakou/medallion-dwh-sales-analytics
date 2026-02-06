@@ -1,9 +1,3 @@
-# medallion-dwh-sales-analytics
-
-End-to-end sales data warehouse using Medallion Architecture with SQL Server ETL and Power BI dashboards.
-
----
-
 ## Project Overview
 
 This project demonstrates end-to-end data warehouse development, from raw data ingestion to business-ready analytics. Built using SQL Server and Power BI, it showcases data engineering practices ETL pipelines, dimensional modeling, and comprehensive data quality management.
