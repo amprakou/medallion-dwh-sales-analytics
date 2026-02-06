@@ -89,7 +89,7 @@ This project demonstrates end-to-end data warehouse development, from raw data i
                                           │
                                           ├── 📄 LICENSE
                                           └── 📄 README.md
-                                          ```
+```
 
 ---
 
