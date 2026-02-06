@@ -28,7 +28,7 @@ ADDCOLUMNS(
 
 ---
 
-## Core Measures
+## Measures
 
 ```dax
 Sales = SUM(fact_sales[sales_amount])
