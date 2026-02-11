@@ -1,7 +1,8 @@
 ## Sales Overview
 
 
-<img width="1427" height="799" alt="544333937-d71076a2-22f8-4086-8238-6a785313f09f" src="https://github.com/user-attachments/assets/1cccb489-0122-4141-b609-102201dac0c6" />
+<img width="1428" height="802" alt="image" src="https://github.com/user-attachments/assets/88ca7047-4a29-4210-82e6-351d6186ab9c" />
+
 
 
 
@@ -36,6 +37,6 @@ Horizontal bar chart displaying sales distribution across key markets. Identifie
 
 ### Filters
 
-Year, Month, and Date slicers at the top of the page allow filtering across all visuals simultaneously.
+Custom filter panel accessed via **Filters** button (bookmark-based) with Year, Month, Quarter, and Full Date slicers.
 
 
